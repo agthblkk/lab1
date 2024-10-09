@@ -40,7 +40,20 @@ class MainActivity : AppCompatActivity() {
             val dryMass = calculateDryMass(HP, CP, SP, NP, OP, KRS)
             val combustibleMass = calculateCombustibleMass(HP, CP, SP, NP, OP, KRG)
 
-            resultTextView.text = "Суха маса палива: $dryMass\n\nГорюча маса палива: $combustibleMass"
+            // Додаємо обчислення нижчої теплоти згоряння
+            val heatWorkingMass = calculateHeat(CP, HP, OP, SP) // Для робочої маси
+            val heatDryMass = calculateHeat(CP * KRS, HP * KRS, OP * KRS, SP * KRS) // Для сухої маси
+            val heatCombustibleMass = calculateHeat(CP * KRG, HP * KRG, OP * KRG, SP * KRG) // Для горючої маси
+
+            resultTextView.text = """
+                Суха маса палива: $dryMass
+                Горюча маса палива: $combustibleMass
+                
+                Нижча теплота згоряння:
+                - Робоча маса: $heatWorkingMass кДж/кг
+                - Суха маса: $heatDryMass кДж/кг
+                - Горюча маса: $heatCombustibleMass кДж/кг
+            """.trimIndent()
         }
 
         // Обробка кнопки "Скинути"
@@ -57,7 +70,7 @@ class MainActivity : AppCompatActivity() {
             // Повернення початкового тексту у TextView
             resultTextView.text = "Тут ви побачите результати!"
         }
-        // Обробка кнопки "Скинути"
+
         task2Button.setOnClickListener {
             // Створюємо інтенцію для переходу до Task2Activity
             val intent = Intent(this, Task2Activity::class.java)
@@ -87,5 +100,10 @@ class MainActivity : AppCompatActivity() {
         val NG = NP * KRG
         val OG = OP * KRG
         return "H: %.3f%%, C: %.3f%%, S: %.3f%%, N: %.3f%%, O: %.3f%%".format(HG, CG, SG, NG, OG)
+    }
+
+    // Функція для обчислення нижчої теплоти згоряння
+    private fun calculateHeat(C: Double, H: Double, O: Double, S: Double): Double {
+        return 337 * C + 1442 * (H - O / 8) + 93 * S
     }
 }

@@ -1,98 +1,101 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:padding="16dp"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/inputHP"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Ввести HP (%)"
-        android:inputType="numberDecimal" />
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/inputCP"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="ВвестиCP (%)"
-        android:inputType="numberDecimal" />
+        <EditText
+            android:id="@+id/inputHP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ввести HP (%)"
+            android:inputType="numberDecimal" />
 
-    <EditText
-        android:id="@+id/inputSP"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ввести SP (%)"
-        android:inputType="numberDecimal" />
+        <EditText
+            android:id="@+id/inputCP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ввести CP (%)"
+            android:inputType="numberDecimal" />
 
-    <EditText
-        android:id="@+id/inputNP"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ввести NP (%)"
-        android:inputType="numberDecimal" />
+        <EditText
+            android:id="@+id/inputSP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ввести SP (%)"
+            android:inputType="numberDecimal" />
 
-    <EditText
-        android:id="@+id/inputOP"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ввести OP (%)"
-        android:inputType="numberDecimal" />
+        <EditText
+            android:id="@+id/inputNP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ввести NP (%)"
+            android:inputType="numberDecimal" />
 
-    <EditText
-        android:id="@+id/inputWP"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ввести WP (%)"
-        android:inputType="numberDecimal" />
+        <EditText
+            android:id="@+id/inputOP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ввести OP (%)"
+            android:inputType="numberDecimal" />
 
-    <EditText
-        android:id="@+id/inputAP"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ввести AP (%)"
-        android:inputType="numberDecimal" />
+        <EditText
+            android:id="@+id/inputWP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ввести WP (%)"
+            android:inputType="numberDecimal" />
 
-    <Button
-        android:id="@+id/calculateButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Розрахувати"
-        android:textSize="18sp"
-        style="@style/CustomButtonStyle" />
+        <EditText
+            android:id="@+id/inputAP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ввести AP (%)"
+            android:inputType="numberDecimal" />
 
+        <Button
+            android:id="@+id/calculateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Розрахувати"
+            android:textSize="18sp"
+            style="@style/CustomButtonStyle" />
 
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="26dp"
+            android:paddingBottom="26dp"
+            android:text="Тут ви побачите результати!"
+            android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/resultTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="26dp"
-        android:paddingBottom="26dp"
-        android:text="Тут ви побачите результати!"
-        android:textSize="20sp"
-        />
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Скинути"
+            android:textSize="18sp"
+            style="@style/CustomButtonStyle"
+            android:layout_marginTop="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"/>
 
-    <Button
-        android:id="@+id/resetButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Скинути"
-        android:textSize="18sp"
-        style="@style/CustomButtonStyle"
-        android:layout_marginTop="16dp"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"/>
+        <Button
+            android:id="@+id/task2Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Калькулятор для перерахунку елементарного складу та нижчої теплоти згоряння мазуту"
+            android:textSize="18sp"
+            style="@style/CustomButtonStyle"
+            android:layout_marginTop="30sp"
+            android:paddingTop="16dp" />
 
-    <Button
-        android:id="@+id/task2Button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Калькулятор для перерахунку елементарного складу та нижчої теплоти згоряння мазуту"
-        android:textSize="18sp"
-        style="@style/CustomButtonStyle"
-        android:layout_marginTop="30sp"
-        android:paddingTop="16dp" />
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

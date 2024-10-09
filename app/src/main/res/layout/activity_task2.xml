@@ -95,8 +95,7 @@
         android:id="@+id/returnToCalculator1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Повернутися до калькулятору розрахунку складу сухої та горючої маси палива та
-нижчої теплоти згоряння"
+        android:text="Повернутися у головне меню"
         android:textSize="18sp"
         style="@style/CustomButtonStyle"
         android:layout_marginTop="16dp"
