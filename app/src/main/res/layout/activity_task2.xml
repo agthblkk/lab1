@@ -1,0 +1,105 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Калькулятор мазуту"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:paddingBottom="16dp" />
+
+    <EditText
+        android:id="@+id/inputCarbon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введіть вміст вуглецю (%)"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/inputHydrogen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введіть вміст водню (%)"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/inputOxygen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введіть вміст кисню (%)"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/inputSulfur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введіть вміст сірки (%)"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/inputWaterContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введіть вміст вологи (%)"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/inputAshContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введіть вміст золи (%)"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/inputLowerHeatingValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введіть нижчу теплоту згоряння (МДж/кг)"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Розрахувати"
+        android:textSize="18sp"
+        style="@style/CustomButtonStyle"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Тут ви побачите результати!"
+        android:textSize="18sp"
+        android:paddingTop="16dp" />
+
+    <Button
+        android:id="@+id/resetButton1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Скинути"
+        android:textSize="18sp"
+        style="@style/CustomButtonStyle"
+        android:layout_marginTop="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"/>
+
+    <Button
+        android:id="@+id/returnToCalculator1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Повернутися до калькулятору розрахунку складу сухої та горючої маси палива та
+нижчої теплоти згоряння"
+        android:textSize="18sp"
+        style="@style/CustomButtonStyle"
+        android:layout_marginTop="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"/>
+</LinearLayout>

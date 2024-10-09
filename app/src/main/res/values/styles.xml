@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Стиль для кнопки -->
+    <style name="CustomButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@color/button_color</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+</resources>
